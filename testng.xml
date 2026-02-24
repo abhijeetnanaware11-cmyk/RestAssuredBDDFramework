@@ -2,9 +2,10 @@
 <suite name="API Test Suite">
 
     <test name="All API Tests">
-        <packages>
-            <package name="com.qa.rest.tests1"/>
-        </packages>
+        <classes>
+            <class name="com.qa.rest.tests1.PostRequestTest"/>
+            <class name="com.qa.rest.tests1.GetRequestTest"/>
+        </classes>
     </test>
 
 </suite>
