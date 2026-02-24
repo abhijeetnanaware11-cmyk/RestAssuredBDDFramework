@@ -46,10 +46,6 @@
 </dependency>
 
     
-    <dependency>
-    	<groupId>org.sample</groupId>
-    	<artifactId>maven.sample</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
+    
   </dependencies>
 </project>
