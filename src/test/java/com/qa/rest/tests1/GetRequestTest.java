@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 
 import io.restassured.matcher.ResponseAwareMatcher;
 import io.restassured.response.Response;
-public class GetRequest extends BaseTest {
+public class GetRequestTest extends BaseTest {
 
     @Test
     public void getUserById() {
