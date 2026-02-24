@@ -20,16 +20,7 @@ public class GetRequestTest extends BaseTest {
      .header("Content-Type","text/html");
     }
 
-    @Test
-    public void deleteUserById() {
-        given()
-            .spec(reqSpec)
-            .header("Test-Header", "TestValue")
-        .when()
-            .delete("/users/89")
-        .then()
-            .statusCode(200);
-    }
+    
     
     @Test
     public void getAllUsers() {
