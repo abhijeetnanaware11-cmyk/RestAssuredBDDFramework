@@ -8,31 +8,31 @@ import io.restassured.matcher.ResponseAwareMatcher;
 import io.restassured.response.Response;
 public class GetRequestTest extends BaseTest {
 
-    @Test
-    public void getUserById() {
-        given()
-        .spec(reqSpec)
-        .header("Test-Header", "TestValue") 
-    .when()
-        .get("/users/3")
-    .then()
-        .statusCode(200)
-     .header("Content-Type","text/html");
-    }
-
+    
+	@Test
+	public void getUserById() {
+	    given()
+	        .spec(reqSpec)
+	        .log().all()   // prints request
+	    .when()
+	        .get("/users/3")
+	    .then()
+	        .log().all()   // prints response
+	        .statusCode(200);
+	}
    
     
-    @Test
-    public void getAllUsers() {
-        given()
-            .spec(reqSpec)
-        .when()
-            .get("/users/all")
-        .then()
-            .statusCode(200)
-            .header("Content-Type","text/html");
-            
-            }
+	@Test
+	public void getAllUsers() {
+	    given()
+	        .spec(reqSpec)
+	        .log().all()
+	    .when()
+	        .get("/users/all")
+	    .then()
+	        .log().all()
+	        .statusCode(200);
+	}
    
 
    
@@ -42,9 +42,11 @@ public class GetRequestTest extends BaseTest {
     public void getAllUserGroups() {
         given()
             .spec(reqSpec)
+            .log().all()
         .when()
             .get("/userGroups/all")
         .then()
+        .log().all()
             .statusCode(200)
             .header("Content-Type","text/html");
             
