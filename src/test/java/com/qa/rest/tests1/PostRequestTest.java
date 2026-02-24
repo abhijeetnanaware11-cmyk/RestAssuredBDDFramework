@@ -16,7 +16,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class Post_Request {
+public class PostRequestTest {
 
     private String token;
     
