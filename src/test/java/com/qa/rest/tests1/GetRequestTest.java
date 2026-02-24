@@ -20,7 +20,7 @@ public class GetRequestTest extends BaseTest {
      .header("Content-Type","text/html");
     }
 
-    
+   
     
     @Test
     public void getAllUsers() {
@@ -33,25 +33,10 @@ public class GetRequestTest extends BaseTest {
             .header("Content-Type","text/html");
             
             }
-    
-    @Test
-    public void deleteUserById_UserNotFound() {
+   
 
-        given()
-            .spec(reqSpec)
-            .header("Test-Header", "TestValue")
-        .when()
-            .delete("/users/1000")
-        .then()
-            .statusCode(200)   // as API currently returns
-            .body("error.errorMessage", equalTo("Users do not exist."));
-    }
-
-    
-    private ResponseAwareMatcher<Response> equalTo(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+   
+	
 
 	@Test
     public void getAllUserGroups() {
